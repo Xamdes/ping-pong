@@ -24,7 +24,7 @@ export function pingPong(goal)
     {
       returnValue = i;
     }
-    output.push(returnValue)
+    output.push(returnValue);
   }
   return output.reverse();
 }

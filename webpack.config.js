@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports =
 {
@@ -11,7 +12,12 @@ module.exports =
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  devtool: 'eval-source-map',
+  devServer: {
+    contentBase: './dist'
+  },
   plugins: [
+    new UglifyJsPlugin({sourceMap: true}),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
@@ -32,6 +38,11 @@ module.exports =
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
       }
     ]
   }
