@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/Xamdes/ping-pong#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.10",
+    "html-webpack-plugin": "^3.0.6",
+    "jquery": "^3.3.1",
+    "style-loader": "^0.20.2",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.9"
   }

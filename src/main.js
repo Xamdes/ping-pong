@@ -1,10 +1,8 @@
 import { pingPong } from './ping-pong';
-import { bodyString } from './sample-index';
+import './styles.css';
 
 $(function()
 {
-  $("body").html(bodyString());
-
   $("#ping-pong-form").submit(function(event)
   {
     event.preventDefault();
