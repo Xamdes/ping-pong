@@ -1,11 +1,17 @@
 import { pingPong } from './ping-pong';
+import { bodyString } from './sample-index';
 
-$(document).ready(function() {
-  $('#ping-pong-form').submit(function(event) {
+$(function()
+{
+  $("body").html(bodyString());
+
+  $("#ping-pong-form").submit(function(event)
+  {
     event.preventDefault();
     var goal = $('#goal').val();
     var output = pingPong(goal);
-    output.forEach(function(element) {
+    output.forEach(function(element)
+    {
       $('#solution').append("<li>" + element + "</li>");
     });
   });
