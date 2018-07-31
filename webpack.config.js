@@ -24,7 +24,7 @@ module.exports =
     }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Ping Pong',
+      title: 'Pang Pong',
       template: './src/index.html',
       inject: 'body'
     })
@@ -41,7 +41,10 @@ module.exports =
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
         loader: "eslint-loader"
       }
     ]

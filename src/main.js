@@ -1,4 +1,6 @@
-import { pingPong } from './ping-pong';
+import {pingPong} from './ping-pong';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(function()
