@@ -45,7 +45,7 @@ module.exports =
           /node_modules/,
           /spec/
         ],
-        loader: "eslint-loader"
+        loader: 'eslint-loader'
       }
     ]
   }
